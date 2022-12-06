@@ -3,16 +3,39 @@
 }
 
 .head-menu {
-  display: flex;
+  // display: flex;
 }
 
 .nav {
-  display: flex;
-  align-items: center;
+  // display: flex;
+  // align-items: center;
 }
 
+.nav-button{
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.nav__icon-close{
+  display: none;
+}
+
+.nav-button.is-open .nav__icon-close{
+  display: block;
+}
+
+.nav-button.is-open .nav__icon-menu{
+  display: none;
+}
+
+
+
+
 .nav__list {
-  display: flex;
+  // display: flex;
 }
 
 .nav__item {
@@ -22,7 +45,7 @@
   }
 
   &:not(:last-child) {
-    margin-right: 50px;
+    // margin-right: 50px;
   }
 }
 
@@ -79,17 +102,17 @@
 }
 
 .contacts-list {
-  display: flex;
+  // display: flex;
 }
 
 .header__contacts-list {
-  align-items: center;
-  margin-left: auto;
+  // align-items: center;
+  // margin-left: auto;
 }
 
 .contacts-list__item {
   & + & {
-    margin-left: 30px;
+    // margin-left: 30px;
   }
 }
 
