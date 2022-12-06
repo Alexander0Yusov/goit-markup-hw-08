@@ -1,0 +1,32 @@
+.logo {
+  display: block;
+  padding: 0;
+
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
+}
+
+.logo__web--blue {
+  color: $my-blue;
+}
+
+.logo__studio--black {
+  @include logo-toggle-color($black);
+}
+
+.logo__studio--white {
+  @include logo-toggle-color($white);
+}
+
+/* это класс-миксин - класс родитель и потомок для внешней геом */
+.header__logo {
+  margin-right: 93px;
+}
+
+/* это модификатор - класс по внутренним особенностям блока/эл. */
+.logo--big {
+  padding: 24px 0;
+}

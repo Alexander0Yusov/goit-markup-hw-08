@@ -1,0 +1,35 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  /* outline: 2px solid tomato; */
+}
+
+.section {
+  padding: 94px 0;
+}
+
+.no-padding {
+  padding: 0 0;
+}
+
+.btn {
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: $my-blue;
+  }
+}
+
+.link {
+  text-decoration: none;
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transform: scale(0.66);
+}

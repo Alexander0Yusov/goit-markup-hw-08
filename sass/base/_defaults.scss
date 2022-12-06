@@ -1,0 +1,29 @@
+// сброс стилей
+
+body {
+  font-family: 'Roboto', 'Raleway', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: $gray;
+}
+
+p,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
