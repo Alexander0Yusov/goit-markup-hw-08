@@ -13,15 +13,34 @@
 
 .portfolio__filter-list {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+
+  @media screen and(min-width:768px) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  @media screen and(min-width:1200px) {
+    margin-bottom: 50px;
+  }
 }
 
 .portfolio__filter-item {
   display: block;
 
+  &:first-child {
+    margin-bottom: 15px;
+  }
+
   &:not(:last-child) {
     margin-right: 8px;
+  }
+
+  @media screen and(min-width:768px) {
+    &:first-child {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -55,17 +74,21 @@
 }
 
 .portfolio__card-set {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: calc(-1 * $card-set-gap);
-  margin-left: calc(-1 * $card-set-gap);
+  @media screen and(min-width:768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * $card-set-gap);
+    margin-left: calc(-1 * $card-set-gap);
+  }
 }
 
 .portfolio__card-cell {
   display: block;
-  flex-basis: calc(100% / 3 - $card-set-gap);
-  margin-left: $card-set-gap;
-  margin-top: $card-set-gap;
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   transition-property: box-shadow;
   transition-duration: 250ms;
@@ -74,6 +97,27 @@
   &:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+
+  @media screen and(min-width:768px) {
+    flex-basis: calc(100% / 2 - $card-set-gap);
+    margin-left: $card-set-gap;
+    margin-top: $card-set-gap;
+    margin-bottom: 0;
+  }
+
+  @media screen and(min-width:1200px) {
+    flex-basis: calc(100% / 3 - $card-set-gap);
+    margin-left: $card-set-gap;
+    margin-top: $card-set-gap;
+  }
+}
+
+.card {
+  @media screen and(min-width:768px) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
 }
 
@@ -111,6 +155,10 @@
 .card__content {
   padding: 20px 24px;
   border: 1px solid $lighter-gray;
+
+  @media screen and(min-width:768px) {
+    flex-grow: 1;
+  }
 }
 
 .card__title {

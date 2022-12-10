@@ -16,45 +16,91 @@
     />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
+
   <body>
     <header class="header">
       <div class="container head-menu">
         <nav class="nav">
-          <a class="logo header__logo logo--big" href="">
+          <a class="logo header__logo logo--big" href="./index.html">
             <span class="logo__web logo__web--blue">Web</span
             ><span class="logo__studio logo__studio--black">Studio</span>
           </a>
 
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a class="nav__link" href="./index.html"> Студія </a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link underline" href=""> Портфоліо </a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="">Контакти</a>
-            </li>
-          </ul>
+          <button class="nav__button js-open-menu" type="button">
+            <svg height="17" width="25" aria-level="Переключатель мобильного меню">
+              <use class="nav__icon-menu" href="./images/nav-btn-sprite.svg#icon-menu_24px"></use>
+            </svg>
+          </button>
+
+          <div class="nav__toggle-block">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link" href="./index.html">Студія</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link underline" href="">Портфоліо</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="">Контакти</a>
+              </li>
+            </ul>
+
+            <ul class="contacts-list header__contacts-list">
+              <li class="contacts-list__item">
+                <a class="contacts-list__link link" href="">
+                  <svg class="contacts-list__icon-envelope">
+                    <use href="./images/sprite.svg#icon-envelope"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </li>
+
+              <li class="contacts-list__item">
+                <a class="contacts-list__link link" href="">
+                  <svg class="contacts-list__icon-smartphone">
+                    <use href="./images/sprite.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11
+                </a>
+              </li>
+            </ul>
+          </div>
         </nav>
+      </div>
+      <div class="js-menu-container">
+        <button class="nav__button js-close-menu" type="button">
+          <svg height="20" width="20" aria-level="Переключатель мобильного меню">
+            <use class="nav__icon-close" href="./images/nav-btn-sprite.svg#icon-close_24px"></use>
+          </svg>
+        </button>
 
-        <ul class="contacts-list header__contacts-list">
-          <li class="contacts-list__item">
-            <a class="contacts-list__link link" href="">
-              <svg class="contacts-list__icon-envelope">
-                <use href="./images/sprite.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
+        <ul class="js-menu-container__nav-list">
+          <li class="js-menu-container__nav-item">
+            <a class="js-menu-container__nav-link link" href="./index.html"> Студія </a>
           </li>
+          <li class="js-menu-container__nav-item">
+            <a class="js-menu-container__nav-link link" href=""> Портфоліо </a>
+          </li>
+          <li class="js-menu-container__nav-item">
+            <a class="js-menu-container__nav-link link" href="">Контакти</a>
+          </li>
+        </ul>
 
-          <li class="contacts-list__item">
-            <a class="contacts-list__link link" href="">
-              <svg class="contacts-list__icon-smartphone">
-                <use href="./images/sprite.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
+        <a class="js-menu-container__mail-link link" href=""> info@devstudio.com </a>
+        <a class="js-menu-container__phone-link link" href=""> +38 096 111 11 11 </a>
+
+        <ul class="js-menu-container__soc-list">
+          <li class="js-menu-container__soc-item">
+            <a class="js-menu-container__soc-link link" href="">Instagram</a>
+          </li>
+          <li class="js-menu-container__soc-item">
+            <a class="js-menu-container__soc-link link" href="">Twitter</a>
+          </li>
+          <li class="js-menu-container__soc-item">
+            <a class="js-menu-container__soc-link link" href="">Facebook</a>
+          </li>
+          <li class="js-menu-container__soc-item">
+            <a class="js-menu-container__soc-link link" href="">LinkedIn</a>
           </li>
         </ul>
       </div>
@@ -87,7 +133,11 @@
             <li class="portfolio__card-cell">
               <article class="card">
                 <div class="card__thumb">
-                  <img width="370" src="./images/proj-1.jpg" alt="проект-1" />
+                  <img
+                    srcset="./images/proj-1-450.jpg 1x, ./images/proj-1-900.jpg 2x"
+                    src="./images/proj-1-450.jpg"
+                    alt="проект-1"
+                  />
                   <div class="card__preview">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -105,7 +155,11 @@
             <li class="portfolio__card-cell">
               <article class="card">
                 <div class="card__thumb">
-                  <img width="370" src="./images/proj-2.jpg" alt="проект-2" />
+                  <img
+                    srcset="./images/proj-2-450.jpg 1x, ./images/proj-2-900.jpg 2x"
+                    src="./images/proj-2-450.jpg"
+                    alt="проект-2"
+                  />
                   <div class="card__preview">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -123,7 +177,11 @@
             <li class="portfolio__card-cell">
               <article class="card">
                 <div class="card__thumb">
-                  <img width="370" src="./images/proj-3.jpg" alt="проект-3" />
+                  <img
+                    srcset="./images/proj-3-450.jpg 1x, ./images/proj-3-900.jpg 2x"
+                    src="./images/proj-3-450.jpg"
+                    alt="проект-3"
+                  />
                   <div class="card__preview">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -141,7 +199,11 @@
             <li class="portfolio__card-cell">
               <article class="card">
                 <div class="card__thumb">
-                  <img width="370" src="./images/proj-4.jpg" alt="проект-4" />
+                  <img
+                    srcset="./images/proj-4-450.jpg 1x, ./images/proj-4-900.jpg 2x"
+                    src="./images/proj-4-450.jpg"
+                    alt="проект-4"
+                  />
                   <div class="card__preview">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -159,7 +221,11 @@
             <li class="portfolio__card-cell">
               <article class="card">
                 <div class="card__thumb">
-                  <img width="370" src="./images/proj-5.jpg" alt="проект-5" />
+                  <img
+                    srcset="./images/proj-5-450.jpg 1x, ./images/proj-5-900.jpg 2x"
+                    src="./images/proj-5-450.jpg"
+                    alt="проект-5"
+                  />
                   <div class="card__preview">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -178,7 +244,11 @@
             <li class="portfolio__card-cell">
               <article class="card">
                 <div class="card__thumb">
-                  <img width="370" src="./images/proj-6.jpg" alt="проект-6" />
+                  <img
+                    srcset="./images/proj-6-450.jpg 1x, ./images/proj-6-900.jpg 2x"
+                    src="./images/proj-6-450.jpg"
+                    alt="проект-6"
+                  />
                   <div class="card__preview">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -196,7 +266,11 @@
             <li class="portfolio__card-cell">
               <article class="card">
                 <div class="card__thumb">
-                  <img width="370" src="./images/proj-7.jpg" alt="проект-7" />
+                  <img
+                    srcset="./images/proj-7-450.jpg 1x, ./images/proj-7-900.jpg 2x"
+                    src="./images/proj-7-450.jpg"
+                    alt="проект-7"
+                  />
                   <div class="card__preview">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -214,7 +288,11 @@
             <li class="portfolio__card-cell">
               <article class="card">
                 <div class="card__thumb">
-                  <img width="370" src="./images/proj-8.jpg" alt="проект-8" />
+                  <img
+                    srcset="./images/proj-8-450.jpg 1x, ./images/proj-8-900.jpg 2x"
+                    src="./images/proj-8-450.jpg"
+                    alt="проект-8"
+                  />
                   <div class="card__preview">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -232,7 +310,11 @@
             <li class="portfolio__card-cell">
               <article class="card">
                 <div class="card__thumb">
-                  <img width="370" src="./images/proj-9.jpg" alt="проект-9" />
+                  <img
+                    srcset="./images/proj-9-450.jpg 1x, ./images/proj-9-900.jpg 2x"
+                    src="./images/proj-9-450.jpg"
+                    alt="проект-9"
+                  />
                   <div class="card__preview">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -322,6 +404,8 @@
         </div>
       </div>
     </footer>
+
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
